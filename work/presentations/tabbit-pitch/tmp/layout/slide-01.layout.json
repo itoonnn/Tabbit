@@ -1,0 +1,413 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/01a6x2",
+    "id": "01a6x2",
+    "slide": 1,
+    "layoutId": "605ccc5f-630d-42ea-b44e-7949165688ff",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "3218930c-9878-48f5-872f-bca59f76a040",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFF8EB",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "605ccc5f-630d-42ea-b44e-7949165688ff",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "3218930c-9878-48f5-872f-bca59f76a040",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "3218930c-9878-48f5-872f-bca59f76a040",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8bat47y1",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFF8EB",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jqh0fepk",
+      "id": "2",
+      "bbox": [
+        760,
+        0,
+        520,
+        720
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#EDF7EF",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q5o7qpg3",
+      "id": "3",
+      "bbox": [
+        72,
+        96,
+        130,
+        5
+      ],
+      "geometry": "rect",
+      "fillColor": "#ED7D5A",
+      "lineColor": "#ED7D5A",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/18jqh0fe",
+      "id": "4",
+      "bbox": [
+        72,
+        150,
+        560,
+        92
+      ],
+      "geometry": "rect",
+      "text": "Tabbit",
+      "textPreview": "Tabbit",
+      "resolvedFontSize": 64,
+      "resolvedTextStyle": {
+        "fontSize": 64,
+        "typeface": "Aptos Display",
+        "color": "#245445",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Tabbit"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Tabbit",
+          "resolvedTextStyle": {
+            "fontSize": 64,
+            "typeface": "Aptos Display",
+            "color": "#245445",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Tabbit",
+              "fontSize": 64,
+              "typeface": "Aptos Display",
+              "color": "#245445",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8nqxs72x",
+      "id": "5",
+      "bbox": [
+        76,
+        262,
+        610,
+        110
+      ],
+      "geometry": "rect",
+      "text": "Group habit tracker ที่ช่วยให้คนกลับมาทำต่อ เพราะมีเพื่อนเห็น progress และให้กำลังใจกัน",
+      "textPreview": "Group habit tracker ที่ช่วยให้คนกลับมาทำต่อ เพราะมีเพื่อนเห็น progress และให้กำลังใจกัน",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "fontSize": 28,
+        "typeface": "Aptos",
+        "color": "#18231F",
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Group habit tracker ที่ช่วยให้คนกลับมาทำต่อ"
+          },
+          {
+            "index": 2,
+            "text": "เพราะมีเพื่อนเห็น progress และให้กำลังใจกัน"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Group habit tracker ที่ช่วยให้คนกลับมาทำต่อ เพราะมีเพื่อนเห็น progress และให้กำลังใจกัน",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Aptos",
+            "color": "#18231F",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Group habit tracker ที่ช่วยให้คนกลับมาทำต่อ เพราะมีเพื่อนเห็น progress และให้กำลังใจกัน",
+              "fontSize": 28,
+              "typeface": "Aptos",
+              "color": "#18231F",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j2t83itg",
+      "id": "6",
+      "bbox": [
+        76,
+        402,
+        330,
+        38
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#245445",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qh0fepkz",
+      "id": "7",
+      "bbox": [
+        94,
+        410,
+        294,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Free to start · Pay when groups scale",
+      "textPreview": "Free to start · Pay when groups scale",
+      "resolvedFontSize": 16,
+      "resolvedTextStyle": {
+        "fontSize": 16,
+        "typeface": "Aptos",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Free to start · Pay when groups scale"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Free to start · Pay when groups scale",
+          "resolvedTextStyle": {
+            "fontSize": 16,
+            "typeface": "Aptos",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Free to start · Pay when groups scale",
+              "fontSize": 16,
+              "typeface": "Aptos",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/8nqxs72x",
+      "id": "8",
+      "bbox": [
+        804,
+        162,
+        330,
+        330
+      ],
+      "alt": "Tabbit rabbit stair-step logo",
+      "contentType": "image/jpeg",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "e5771a0c-2f12-451f-9e81-124e31541230",
+        "contentType": "image/jpeg",
+        "byteLength": 42387
+      }
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/crmhk3q5",
+      "id": "9",
+      "bbox": [
+        78,
+        610,
+        250,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Pitch Deck",
+      "textPreview": "Pitch Deck",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "fontSize": 20,
+        "typeface": "Aptos",
+        "color": "#60706A",
+        "bold": true,
+        "alignment": "left",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Pitch Deck"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Pitch Deck",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "Aptos",
+            "color": "#60706A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Pitch Deck",
+              "fontSize": 20,
+              "typeface": "Aptos",
+              "color": "#60706A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

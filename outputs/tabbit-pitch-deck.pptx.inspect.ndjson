@@ -1,0 +1,165 @@
+{"kind":"deck","id":"pr/o8jhtc","name":"Deck"}
+{"kind":"layout","layoutId":"3218930c-9878-48f5-872f-bca59f76a040","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"605ccc5f-630d-42ea-b44e-7949165688ff","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/01a6x2","slide":1,"title":"Tabbit","textShapes":4}
+{"kind":"shape","id":"sh/8bat47y1","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":1,"bbox":[760,0,520,720]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":1,"bbox":[72,96,130,5]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":1,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[72,150,560,92]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":1,"text":"Group habit tracker ที่ช่วยให้คนกลับมาทำต่อ เพราะมีเพื่อนเห็น progress และให้กำลังใจกัน","textPreview":"Group habit tracker ที่ช่วยให้คนกลับมาทำต่อ เพราะมีเพื่อนเห็น progress และให้กำลังใจกัน","textChars":87,"textLines":1,"bbox":[76,262,610,110]}
+{"kind":"shape","id":"sh/j2t83itg","slide":1,"bbox":[76,402,330,38]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":1,"text":"Free to start · Pay when groups scale","textPreview":"Free to start · Pay when groups scale","textChars":37,"textLines":1,"bbox":[94,410,294,24]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":1,"text":"Pitch Deck","textPreview":"Pitch Deck","textChars":10,"textLines":1,"bbox":[78,610,250,32]}
+{"kind":"image","id":"im/8nqxs72x","slide":1,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[804,162,330,330]}
+{"kind":"notes","id":"nt/01a6x2","slide":1,"text":""}
+{"kind":"slide","id":"sl/2ow595","slide":2,"title":"ที่มา","textShapes":10}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":2,"text":"ที่มา","textPreview":"ที่มา","textChars":5,"textLines":1,"bbox":[72,78,400,60]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":2,"bbox":[74,150,100,5]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":2,"text":"หลายคนไม่ได้ขาดเป้าหมาย แต่ขาดระบบที่ทำให้กลับมาทำต่อในวันที่ motivation หาย","textPreview":"หลายคนไม่ได้ขาดเป้าหมาย แต่ขาดระบบที่ทำให้กลับมาทำต่อในวันที่ motivation หาย","textChars":76,"textLines":1,"bbox":[74,190,760,110]}
+{"kind":"shape","id":"sh/twra5gbq","slide":2,"bbox":[76,360,326,150]}
+{"kind":"shape","id":"sh/m58z25kb","slide":2,"bbox":[476,360,326,150]}
+{"kind":"shape","id":"sh/bq1oryts","slide":2,"bbox":[876,360,326,150]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":2,"text":"เริ่มง่าย","textPreview":"เริ่มง่าย","textChars":9,"textLines":1,"bbox":[102,394,260,34]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":2,"text":"แต่รักษาความต่อเนื่องยาก","textPreview":"แต่รักษาความต่อเนื่องยาก","textChars":24,"textLines":1,"bbox":[102,438,260,46]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":2,"text":"ทำคนเดียว","textPreview":"ทำคนเดียว","textChars":9,"textLines":1,"bbox":[502,394,260,34]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":2,"text":"ไม่มีใครเห็นความคืบหน้า","textPreview":"ไม่มีใครเห็นความคืบหน้า","textChars":23,"textLines":1,"bbox":[502,438,260,46]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":2,"text":"กลับมาพรุ่งนี้","textPreview":"กลับมาพรุ่งนี้","textChars":14,"textLines":1,"bbox":[902,394,260,34]}
+{"kind":"textbox","id":"sh/yd0z6103","slide":2,"text":"ต้องมีแรงจากกลุ่มช่วยพยุง","textPreview":"ต้องมีแรงจากกลุ่มช่วยพยุง","textChars":25,"textLines":1,"bbox":[902,438,260,46]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[72,646,50,28]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":2,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[1040,646,120,28]}
+{"kind":"image","id":"im/ovahoza1","slide":2,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[1090,42,82,82]}
+{"kind":"notes","id":"nt/2ow595","slide":2,"text":""}
+{"kind":"slide","id":"sl/zn1b8t","slide":3,"title":"Pain Point","textShapes":12}
+{"kind":"shape","id":"sh/fil0rqd4","slide":3,"bbox":[1082,34,98,98]}
+{"kind":"textbox","id":"sh/xobm58z2","slide":3,"text":"Pain Point","textPreview":"Pain Point","textChars":10,"textLines":1,"bbox":[72,76,440,58]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":3,"text":"Habit tracker ส่วนใหญ่ช่วย “บันทึก” แต่ไม่ได้สร้างแรงรับผิดชอบจากคนรอบตัว","textPreview":"Habit tracker ส่วนใหญ่ช่วย “บันทึก” แต่ไม่ได้สร้างแรงรับผิดชอบจากคนรอบตัว","textChars":73,"textLines":1,"bbox":[74,154,760,86]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":3,"bbox":[86,310,480,92]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":3,"text":"Solo motivation","textPreview":"Solo motivation","textChars":15,"textLines":1,"bbox":[110,328,360,28]}
+{"kind":"textbox","id":"sh/x0nuxc3y","slide":3,"text":"ต้องพึ่งใจตัวเองทุกวัน","textPreview":"ต้องพึ่งใจตัวเองทุกวัน","textChars":22,"textLines":1,"bbox":[110,362,390,28]}
+{"kind":"shape","id":"sh/mlkjm1cf","slide":3,"bbox":[646,310,480,92]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":3,"text":"Hidden progress","textPreview":"Hidden progress","textChars":15,"textLines":1,"bbox":[670,328,360,28]}
+{"kind":"textbox","id":"sh/vixczed8","slide":3,"text":"ไม่มี social context ให้กลับมา","textPreview":"ไม่มี social context ให้กลับมา","textChars":30,"textLines":1,"bbox":[670,362,390,28]}
+{"kind":"shape","id":"sh/2x4nap4r","slide":3,"bbox":[86,440,480,92]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":3,"text":"Chat is messy","textPreview":"Chat is messy","textChars":13,"textLines":1,"bbox":[110,458,360,28]}
+{"kind":"textbox","id":"sh/k3q5o7qp","slide":3,"text":"LINE/Sheets ตาม progress ยาก","textPreview":"LINE/Sheets ตาม progress ยาก","textChars":28,"textLines":1,"bbox":[110,492,390,28]}
+{"kind":"shape","id":"sh/val87ed8","slide":3,"bbox":[646,440,480,92]}
+{"kind":"textbox","id":"sh/6psfil0r","slide":3,"text":"Streak shame","textPreview":"Streak shame","textChars":12,"textLines":1,"bbox":[670,458,360,28]}
+{"kind":"textbox","id":"sh/dcbulwva","slide":3,"text":"พลาดแล้วรู้สึกล้มเหลวและเลิกใช้","textPreview":"พลาดแล้วรู้สึกล้มเหลวและเลิกใช้","textChars":31,"textLines":1,"bbox":[670,492,390,28]}
+{"kind":"textbox","id":"sh/kre1w7mp","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[72,646,50,28]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":3,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[1040,646,120,28]}
+{"kind":"image","id":"im/hk3q5o7q","slide":3,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[1090,42,82,82]}
+{"kind":"notes","id":"nt/zn1b8t","slide":3,"text":""}
+{"kind":"slide","id":"sl/pfspuy","slide":4,"title":"Solution","textShapes":22}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":4,"text":"Solution","textPreview":"Solution","textChars":8,"textLines":1,"bbox":[72,72,420,58]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":4,"text":"เปลี่ยน check-in จากงานส่วนตัว ให้เป็น commitment เล็ก ๆ ที่กลุ่มรับรู้และช่วยกันรักษา","textPreview":"เปลี่ยน check-in จากงานส่วนตัว ให้เป็น commitment เล็ก ๆ ที่กลุ่มรับรู้และช่วยกันรักษา","textChars":86,"textLines":1,"bbox":[74,146,820,86]}
+{"kind":"shape","id":"sh/yxobm58z","slide":4,"bbox":[74,346,150,116]}
+{"kind":"textbox","id":"sh/nih4byhg","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[92,366,38,30]}
+{"kind":"textbox","id":"sh/g3ex0nux","slide":4,"text":"Create group","textPreview":"Create group","textChars":12,"textLines":1,"bbox":[92,408,112,46]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[232,389,42,42]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":4,"bbox":[264,346,150,116]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[282,366,38,30]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":4,"text":"Set shared habit","textPreview":"Set shared habit","textChars":16,"textLines":1,"bbox":[282,408,112,46]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[422,389,42,42]}
+{"kind":"shape","id":"sh/xczed8v6","slide":4,"bbox":[454,346,150,116]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[472,366,38,30]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":4,"text":"Daily check-in","textPreview":"Daily check-in","textChars":14,"textLines":1,"bbox":[472,408,112,46]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[612,389,42,42]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":4,"bbox":[644,346,150,116]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[662,366,38,30]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":4,"text":"See progress","textPreview":"See progress","textChars":12,"textLines":1,"bbox":[662,408,112,46]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[802,389,42,42]}
+{"kind":"shape","id":"sh/y1kre1w7","slide":4,"bbox":[834,346,150,116]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":4,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[852,366,38,30]}
+{"kind":"textbox","id":"sh/g7adsji5","slide":4,"text":"Encourage","textPreview":"Encourage","textChars":9,"textLines":1,"bbox":[852,408,112,46]}
+{"kind":"textbox","id":"sh/9s36hcrm","slide":4,"text":"→","textPreview":"→","textChars":1,"textLines":1,"bbox":[992,389,42,42]}
+{"kind":"shape","id":"sh/yd0z6103","slide":4,"bbox":[1024,346,150,116]}
+{"kind":"textbox","id":"sh/rytsvu9k","slide":4,"text":"6","textPreview":"6","textChars":1,"textLines":1,"bbox":[1042,366,38,30]}
+{"kind":"textbox","id":"sh/gfmlkjm1","slide":4,"text":"Return tomorrow","textPreview":"Return tomorrow","textChars":15,"textLines":1,"bbox":[1042,408,112,46]}
+{"kind":"textbox","id":"sh/90je9cvi","slide":4,"text":"Core loop: กลุ่มเล็ก เห็นกันชัด ให้กำลังใจกันง่าย และกลับมาทำต่อวันถัดไป","textPreview":"Core loop: กลุ่มเล็ก เห็นกันชัด ให้กำลังใจกันง่าย และกลับมาทำต่อวันถัดไป","textChars":72,"textLines":1,"bbox":[120,544,1040,50]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[72,646,50,28]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":4,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[1040,646,120,28]}
+{"kind":"image","id":"im/a1gvy90j","slide":4,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[1090,42,82,82]}
+{"kind":"notes","id":"nt/pfspuy","slide":4,"text":""}
+{"kind":"slide","id":"sl/uxn2fo","slide":5,"title":"Highlight Features","textShapes":16}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":5,"text":"Highlight Features","textPreview":"Highlight Features","textChars":18,"textLines":1,"bbox":[72,72,520,58]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":5,"text":"ทุก feature ต้องช่วย retention, accountability หรือ group momentum","textPreview":"ทุก feature ต้องช่วย retention, accountability หรือ group momentum","textChars":66,"textLines":1,"bbox":[74,140,820,44]}
+{"kind":"shape","id":"sh/1032lszq","slide":5,"bbox":[74,234,330,122]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":5,"text":"Fast check-in","textPreview":"Fast check-in","textChars":13,"textLines":1,"bbox":[98,258,272,30]}
+{"kind":"textbox","id":"sh/judg7ads","slide":5,"text":"กดเสร็จในไม่กี่วินาที","textPreview":"กดเสร็จในไม่กี่วินาที","textChars":21,"textLines":1,"bbox":[98,300,276,40]}
+{"kind":"shape","id":"sh/u9knih4b","slide":5,"bbox":[456,234,330,122]}
+{"kind":"textbox","id":"sh/54zidony","slide":5,"text":"Group progress","textPreview":"Group progress","textChars":14,"textLines":1,"bbox":[480,258,272,30]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":5,"text":"เห็นสถานะวันนี้ของทุกคน","textPreview":"เห็นสถานะวันนี้ของทุกคน","textChars":23,"textLines":1,"bbox":[480,300,276,40]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":5,"bbox":[838,234,330,122]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":5,"text":"Encouragement","textPreview":"Encouragement","textChars":13,"textLines":1,"bbox":[862,258,272,30]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":5,"text":"reaction/ข้อความสั้นแบบ supportive","textPreview":"reaction/ข้อความสั้นแบบ supportive","textChars":34,"textLines":1,"bbox":[862,300,276,40]}
+{"kind":"shape","id":"sh/loj2t83i","slide":5,"bbox":[74,406,330,122]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":5,"text":"Gentle streak","textPreview":"Gentle streak","textChars":13,"textLines":1,"bbox":[98,430,272,30]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":5,"text":"ฉลอง consistency ไม่ลงโทษความพลาด","textPreview":"ฉลอง consistency ไม่ลงโทษความพลาด","textChars":33,"textLines":1,"bbox":[98,472,276,40]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":5,"bbox":[456,406,330,122]}
+{"kind":"textbox","id":"sh/lwval87e","slide":5,"text":"Small group free","textPreview":"Small group free","textChars":16,"textLines":1,"bbox":[480,430,272,30]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":5,"text":"ใช้ฟรีสำหรับกลุ่มไม่เกิน 5 คน","textPreview":"ใช้ฟรีสำหรับกลุ่มไม่เกิน 5 คน","textChars":29,"textLines":1,"bbox":[480,472,276,40]}
+{"kind":"shape","id":"sh/32lszqtc","slide":5,"bbox":[838,406,330,122]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":5,"text":"Organizer tools","textPreview":"Organizer tools","textChars":15,"textLines":1,"bbox":[862,430,272,30]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":5,"text":"dashboard, reminder, summary สำหรับกลุ่มใหญ่","textPreview":"dashboard, reminder, summary สำหรับกลุ่มใหญ่","textChars":44,"textLines":1,"bbox":[862,472,276,40]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[72,646,50,28]}
+{"kind":"textbox","id":"sh/knih4byh","slide":5,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[1040,646,120,28]}
+{"kind":"image","id":"im/9w3m94fu","slide":5,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[1090,42,82,82]}
+{"kind":"notes","id":"nt/uxn2fo","slide":5,"text":""}
+{"kind":"slide","id":"sl/m3pc36","slide":6,"title":"MVP Product","textShapes":10}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":6,"text":"MVP Product","textPreview":"MVP Product","textChars":11,"textLines":1,"bbox":[72,72,460,58]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":6,"text":"เริ่มจาก use case แคบ: 21-Day Reading Challenge เพื่อพิสูจน์พฤติกรรมก่อนขยาย habit type","textPreview":"เริ่มจาก use case แคบ: 21-Day Reading Challenge เพื่อพิสูจน์พฤติกรรมก่อนขยาย habit type","textChars":87,"textLines":1,"bbox":[74,142,920,70]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":6,"bbox":[82,282,510,232]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":6,"text":"MVP scope","textPreview":"MVP scope","textChars":9,"textLines":1,"bbox":[112,314,240,34]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":6,"bbox":[116,377,10,10]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":6,"text":"1 shared habit per group","textPreview":"1 shared habit per group","textChars":24,"textLines":1,"bbox":[140,370,500,34]}
+{"kind":"shape","id":"sh/ji5snelo","slide":6,"bbox":[116,423,10,10]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":6,"text":"Daily check-in + group progress","textPreview":"Daily check-in + group progress","textChars":31,"textLines":1,"bbox":[140,416,500,34]}
+{"kind":"shape","id":"sh/gn29gr2p","slide":6,"bbox":[116,469,10,10]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":6,"text":"Simple encouragement","textPreview":"Simple encouragement","textChars":20,"textLines":1,"bbox":[140,462,500,34]}
+{"kind":"shape","id":"sh/yhgn29gr","slide":6,"bbox":[690,282,430,232]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":6,"text":"Validation metrics","textPreview":"Validation metrics","textChars":18,"textLines":1,"bbox":[720,314,280,34]}
+{"kind":"textbox","id":"sh/gbq1oryt","slide":6,"text":"Day-7 retention\nDaily check-in rate\nEncouragement per group\nSecond challenge intent","textPreview":"Day-7 retention | Daily check-in rate | Encouragement per group | Second challenge intent","textChars":83,"textLines":4,"bbox":[724,368,330,120]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[72,646,50,28]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":6,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[1040,646,120,28]}
+{"kind":"image","id":"im/re1w7mp0","slide":6,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[1090,42,82,82]}
+{"kind":"notes","id":"nt/m3pc36","slide":6,"text":""}
+{"kind":"slide","id":"sl/95j03k","slide":7,"title":"Why Tabbit","textShapes":10}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":7,"text":"Why Tabbit","textPreview":"Why Tabbit","textChars":10,"textLines":1,"bbox":[72,72,420,58]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":7,"text":"เพราะปัญหาไม่ใช่การไม่มี tracker แต่คือการไม่มีแรงรับผิดชอบที่รู้สึกเป็นธรรมชาติ","textPreview":"เพราะปัญหาไม่ใช่การไม่มี tracker แต่คือการไม่มีแรงรับผิดชอบที่รู้สึกเป็นธรรมชาติ","textChars":80,"textLines":1,"bbox":[74,146,900,82]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":7,"bbox":[94,304,310,184]}
+{"kind":"shape","id":"sh/orytsvu9","slide":7,"bbox":[486,304,310,184]}
+{"kind":"shape","id":"sh/z61032ls","slide":7,"bbox":[878,304,310,184]}
+{"kind":"textbox","id":"sh/al87ed8b","slide":7,"text":"LINE-first behavior","textPreview":"LINE-first behavior","textChars":19,"textLines":1,"bbox":[122,340,250,32]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":7,"text":"เข้าใจบริบทกลุ่มไทยและการชวนเพื่อนผ่านแชท","textPreview":"เข้าใจบริบทกลุ่มไทยและการชวนเพื่อนผ่านแชท","textChars":41,"textLines":1,"bbox":[122,388,238,62]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":7,"text":"Accountability first","textPreview":"Accountability first","textChars":20,"textLines":1,"bbox":[514,340,250,32]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":7,"text":"ไม่ได้เป็น habit tracker เดี่ยวที่ค่อยใส่ social feature ทีหลัง","textPreview":"ไม่ได้เป็น habit tracker เดี่ยวที่ค่อยใส่ social feature ทีหลัง","textChars":63,"textLines":1,"bbox":[514,388,238,62]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":7,"text":"Supportive, not shame","textPreview":"Supportive, not shame","textChars":21,"textLines":1,"bbox":[906,340,250,32]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":7,"text":"เน้นกำลังใจและ consistency\nมากกว่าการจัดอันดับให้แพ้ชนะ","textPreview":"เน้นกำลังใจและ consistency | มากกว่าการจัดอันดับให้แพ้ชนะ","textChars":55,"textLines":2,"bbox":[906,388,238,72]}
+{"kind":"textbox","id":"sh/d0z61032","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[72,646,50,28]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":7,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[1040,646,120,28]}
+{"kind":"image","id":"im/twra5gbq","slide":7,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[1090,42,82,82]}
+{"kind":"notes","id":"nt/95j03k","slide":7,"text":""}
+{"kind":"slide","id":"sl/1qtwis","slide":8,"title":"Revenue Stream","textShapes":14}
+{"kind":"shape","id":"sh/zed8v6ps","slide":8,"bbox":[1082,34,98,98]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":8,"text":"Revenue Stream","textPreview":"Revenue Stream","textChars":14,"textLines":1,"bbox":[72,72,520,58]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":8,"text":"Members join free. Organizers pay when coordination becomes valuable.","textPreview":"Members join free. Organizers pay when coordination becomes valuable.","textChars":69,"textLines":1,"bbox":[74,142,880,56]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":8,"bbox":[96,286,320,248]}
+{"kind":"textbox","id":"sh/obm58z25","slide":8,"text":"Free","textPreview":"Free","textChars":4,"textLines":1,"bbox":[122,322,220,36]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":8,"text":"1 active group\nmax 5 people\n1 active challenge","textPreview":"1 active group | max 5 people | 1 active challenge","textChars":46,"textLines":3,"bbox":[122,382,238,96]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":8,"bbox":[122,486,160,38]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":8,"text":"Adoption","textPreview":"Adoption","textChars":8,"textLines":1,"bbox":[140,494,124,24]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":8,"bbox":[478,286,320,248]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":8,"text":"Plus","textPreview":"Plus","textChars":4,"textLines":1,"bbox":[504,322,220,36]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":8,"text":"multiple groups\nlonger history\nbetter reminders","textPreview":"multiple groups | longer history | better reminders","textChars":47,"textLines":3,"bbox":[504,382,238,96]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":8,"bbox":[504,486,160,38]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":8,"text":"Power users","textPreview":"Power users","textChars":11,"textLines":1,"bbox":[522,494,124,24]}
+{"kind":"shape","id":"sh/i5sneloj","slide":8,"bbox":[860,286,320,248]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":8,"text":"Organizer Pro","textPreview":"Organizer Pro","textChars":13,"textLines":1,"bbox":[886,322,220,36]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":8,"text":"larger groups\ndashboard\nsummary / export","textPreview":"larger groups | dashboard | summary / export","textChars":40,"textLines":3,"bbox":[886,382,238,96]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":8,"bbox":[886,486,210,38]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":8,"text":"Hosts & communities","textPreview":"Hosts & communities","textChars":19,"textLines":1,"bbox":[904,494,174,24]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":8,"text":"Next ask: validate free small-group loop first, then test upgrade intent from organizers.","textPreview":"Next ask: validate free small-group loop first, then test upgrade intent from organizers.","textChars":89,"textLines":1,"bbox":[110,592,960,38]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[72,646,50,28]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":8,"text":"Tabbit","textPreview":"Tabbit","textChars":6,"textLines":1,"bbox":[1040,646,120,28]}
+{"kind":"image","id":"im/p8nqxs72","slide":8,"name":"","alt":"Tabbit rabbit stair-step logo","bbox":[1090,42,82,82]}
+{"kind":"notes","id":"nt/1qtwis","slide":8,"text":""}

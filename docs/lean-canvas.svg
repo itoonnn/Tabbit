@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <style>
+      .bg { fill: #f7f3ea; }
+      .title { font-family: Arial, "Noto Sans Thai", sans-serif; font-size: 48px; font-weight: 800; fill: #1f2933; }
+      .subtitle { font-family: Arial, "Noto Sans Thai", sans-serif; font-size: 24px; fill: #52606d; }
+      .card { fill: #ffffff; stroke: #d8cfc1; stroke-width: 2; rx: 14; }
+      .card-alt { fill: #eef6f1; stroke: #b9d3c2; stroke-width: 2; rx: 14; }
+      .card-warm { fill: #fff7e8; stroke: #e5c987; stroke-width: 2; rx: 14; }
+      .label { font-family: Arial, "Noto Sans Thai", sans-serif; font-size: 28px; font-weight: 800; fill: #263238; }
+      .body { font-family: Arial, "Noto Sans Thai", sans-serif; font-size: 22px; fill: #374151; }
+      .small { font-family: Arial, "Noto Sans Thai", sans-serif; font-size: 20px; fill: #4b5563; }
+      .metric { font-family: Arial, "Noto Sans Thai", sans-serif; font-size: 21px; font-weight: 700; fill: #1f2933; }
+      .pill { fill: #2f6f5f; rx: 18; }
+      .pill-text { font-family: Arial, "Noto Sans Thai", sans-serif; font-size: 18px; font-weight: 700; fill: #ffffff; }
+      .arrow { stroke: #2f6f5f; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2f6f5f"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000"/>
+
+  <text x="80" y="80" class="title">Tabbit Lean Canvas</text>
+  <text x="82" y="120" class="subtitle">Freemium habit accountability app: free for solo and small groups, paid for larger usage and organizers</text>
+
+  <rect x="80" y="165" width="280" height="270" class="card"/>
+  <text x="105" y="210" class="label">Problem</text>
+  <text x="105" y="255" class="body">People want better habits</text>
+  <text x="105" y="288" class="body">but drop off alone</text>
+  <text x="105" y="332" class="small">• Motivation fades</text>
+  <text x="105" y="365" class="small">• Progress is invisible</text>
+  <text x="105" y="398" class="small">• No social accountability</text>
+
+  <rect x="390" y="165" width="280" height="270" class="card"/>
+  <text x="415" y="210" class="label">Customer</text>
+  <text x="415" y="255" class="body">Solo users and</text>
+  <text x="415" y="288" class="body">small friend groups</text>
+  <text x="415" y="332" class="small">• Friends / study groups</text>
+  <text x="415" y="365" class="small">• Book clubs</text>
+  <text x="415" y="398" class="small">• Community organizers</text>
+
+  <rect x="700" y="165" width="440" height="270" class="card-alt"/>
+  <text x="725" y="210" class="label">Unique Value Proposition</text>
+  <text x="725" y="260" class="body">Build consistency with people who notice,</text>
+  <text x="725" y="295" class="body">not just private willpower.</text>
+  <rect x="725" y="335" width="285" height="42" class="pill"/>
+  <text x="748" y="363" class="pill-text">Free to start together</text>
+
+  <rect x="1170" y="165" width="350" height="270" class="card"/>
+  <text x="1195" y="210" class="label">Channels</text>
+  <text x="1195" y="255" class="body">Start where groups</text>
+  <text x="1195" y="288" class="body">already coordinate</text>
+  <text x="1195" y="332" class="small">• LINE groups</text>
+  <text x="1195" y="365" class="small">• Friend invites</text>
+  <text x="1195" y="398" class="small">• Schools / communities</text>
+
+  <rect x="80" y="465" width="430" height="245" class="card-warm"/>
+  <text x="105" y="510" class="label">Solution</text>
+  <text x="105" y="558" class="body">Create group → Set shared habit →</text>
+  <text x="105" y="592" class="body">Daily check-in → See progress →</text>
+  <text x="105" y="626" class="body">Encourage each other → Return tomorrow</text>
+  <text x="105" y="672" class="small">MVP: one habit, fast check-in, visible group progress</text>
+
+  <rect x="540" y="465" width="315" height="245" class="card"/>
+  <text x="565" y="510" class="label">Key Metrics</text>
+  <text x="565" y="558" class="metric">Retention</text>
+  <text x="565" y="590" class="small">Day-7 and daily check-in rate</text>
+  <text x="565" y="628" class="metric">Monetization</text>
+  <text x="565" y="660" class="small">Active groups/user, Pro conversion</text>
+
+  <rect x="885" y="465" width="300" height="245" class="card"/>
+  <text x="910" y="510" class="label">Cost Structure</text>
+  <text x="910" y="558" class="small">• Notifications / reminders</text>
+  <text x="910" y="590" class="small">• Group history / storage</text>
+  <text x="910" y="622" class="small">• Dashboard usage</text>
+  <text x="910" y="654" class="small">• Organizer support</text>
+
+  <rect x="1215" y="465" width="305" height="245" class="card"/>
+  <text x="1240" y="510" class="label">Revenue</text>
+  <text x="1240" y="558" class="body">Members join free</text>
+  <text x="1240" y="595" class="small">• Free: 1 group, max 5 people</text>
+  <text x="1240" y="628" class="small">• Plus: multiple active groups</text>
+  <text x="1240" y="660" class="small">• Pro: organizer tools</text>
+
+  <rect x="80" y="755" width="700" height="155" class="card-alt"/>
+  <text x="105" y="800" class="label">Unfair Advantage</text>
+  <text x="105" y="850" class="body">Tabbit designs around group accountability from day one, with a freemium</text>
+  <text x="105" y="884" class="body">model that supports real adoption before charging high-usage organizers.</text>
+
+  <rect x="820" y="755" width="700" height="155" class="card-warm"/>
+  <text x="845" y="800" class="label">Key Assumption To Prove</text>
+  <text x="845" y="850" class="body">Small free groups create the habit loop; organizers pay when coordination</text>
+  <text x="845" y="884" class="body">and usage become valuable enough.</text>
+
+  <path d="M 510 585 C 555 585, 555 585, 600 585" class="arrow"/>
+  <path d="M 855 585 C 880 585, 880 585, 905 585" class="arrow"/>
+  <path d="M 1185 585 C 1200 585, 1200 585, 1215 585" class="arrow"/>
+</svg>
