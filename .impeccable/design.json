@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-27T00:00:00+07:00",
+  "title": "Design System: Tabbit",
+  "extensions": {
+    "colorMeta": {
+      "momentum-teal": {
+        "role": "primary",
+        "displayName": "Momentum Teal",
+        "canonical": "#159A9C",
+        "tonalRamp": ["oklch(18% 0.035 195)", "oklch(28% 0.055 195)", "oklch(40% 0.075 195)", "oklch(52% 0.095 195)", "oklch(64% 0.105 195)", "oklch(76% 0.075 195)", "oklch(86% 0.045 195)", "oklch(94% 0.025 195)"]
+      },
+      "deep-teal": {
+        "role": "primary",
+        "displayName": "Deep Teal",
+        "canonical": "#0F5F62",
+        "tonalRamp": ["oklch(16% 0.03 195)", "oklch(24% 0.045 195)", "oklch(32% 0.06 195)", "oklch(42% 0.075 195)", "oklch(54% 0.08 195)", "oklch(68% 0.06 195)", "oklch(82% 0.04 195)", "oklch(94% 0.02 195)"]
+      },
+      "warm-cloud": {
+        "role": "neutral",
+        "displayName": "Warm Cloud",
+        "canonical": "#FFF8F2",
+        "tonalRamp": ["oklch(18% 0.01 65)", "oklch(30% 0.012 65)", "oklch(44% 0.014 65)", "oklch(58% 0.016 65)", "oklch(72% 0.018 65)", "oklch(84% 0.018 65)", "oklch(92% 0.014 65)", "oklch(98% 0.01 65)"]
+      },
+      "soft-white": {
+        "role": "neutral",
+        "displayName": "Soft White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(28% 0 0)", "oklch(42% 0 0)", "oklch(56% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(92% 0 0)", "oklch(100% 0 0)"]
+      },
+      "action-coral": {
+        "role": "secondary",
+        "displayName": "Action Coral",
+        "canonical": "#F26D5B",
+        "tonalRamp": ["oklch(18% 0.055 32)", "oklch(30% 0.08 32)", "oklch(42% 0.11 32)", "oklch(54% 0.15 32)", "oklch(66% 0.17 32)", "oklch(76% 0.13 32)", "oklch(86% 0.075 32)", "oklch(94% 0.035 32)"]
+      },
+      "coral-tint": {
+        "role": "secondary",
+        "displayName": "Coral Tint",
+        "canonical": "#FFE3DD",
+        "tonalRamp": ["oklch(18% 0.025 32)", "oklch(30% 0.04 32)", "oklch(44% 0.055 32)", "oklch(58% 0.065 32)", "oklch(72% 0.055 32)", "oklch(84% 0.04 32)", "oklch(92% 0.025 32)", "oklch(96% 0.018 32)"]
+      },
+      "teal-mist": {
+        "role": "tertiary",
+        "displayName": "Teal Mist",
+        "canonical": "#BFEDEA",
+        "tonalRamp": ["oklch(18% 0.025 195)", "oklch(30% 0.04 195)", "oklch(44% 0.055 195)", "oklch(58% 0.065 195)", "oklch(72% 0.055 195)", "oklch(84% 0.04 195)", "oklch(92% 0.025 195)", "oklch(96% 0.018 195)"]
+      },
+      "ink-brown": {
+        "role": "neutral",
+        "displayName": "Ink Brown",
+        "canonical": "#2F2A25",
+        "tonalRamp": ["oklch(15% 0.01 55)", "oklch(24% 0.012 55)", "oklch(34% 0.014 55)", "oklch(46% 0.016 55)", "oklch(58% 0.014 55)", "oklch(72% 0.012 55)", "oklch(86% 0.01 55)", "oklch(95% 0.006 55)"]
+      },
+      "stone-muted": {
+        "role": "neutral",
+        "displayName": "Stone Muted",
+        "canonical": "#756F68",
+        "tonalRamp": ["oklch(16% 0.008 55)", "oklch(28% 0.01 55)", "oklch(40% 0.012 55)", "oklch(52% 0.012 55)", "oklch(64% 0.01 55)", "oklch(76% 0.008 55)", "oklch(88% 0.006 55)", "oklch(96% 0.004 55)"]
+      },
+      "sand-line": {
+        "role": "neutral",
+        "displayName": "Sand Line",
+        "canonical": "#E8DED2",
+        "tonalRamp": ["oklch(18% 0.012 65)", "oklch(30% 0.014 65)", "oklch(44% 0.016 65)", "oklch(58% 0.018 65)", "oklch(72% 0.018 65)", "oklch(84% 0.016 65)", "oklch(90% 0.014 65)", "oklch(96% 0.01 65)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Primary mobile screen questions and major LINE share headlines only." },
+      "headline": { "displayName": "Headline", "purpose": "Screen titles, progress summaries, and important challenge state." },
+      "title": { "displayName": "Title", "purpose": "Module headings, card titles, and button labels." },
+      "body": { "displayName": "Body", "purpose": "Explanatory copy and member-facing context." },
+      "label": { "displayName": "Label", "purpose": "Status labels, day chips, helper metadata, and compact state text." }
+    },
+    "shadows": [
+      { "name": "soft-teal-lift", "value": "0 12px 36px rgba(15, 95, 98, 0.12)", "purpose": "Supportive progress modules or focused action containers." },
+      { "name": "preview-card-lift", "value": "0 18px 48px rgba(47, 42, 37, 0.12)", "purpose": "LINE preview compositions or presentation mockups." }
+    ],
+    "motion": [
+      { "name": "ease-out-quart", "value": "cubic-bezier(0.25, 1, 0.5, 1)", "purpose": "Default state transitions for buttons and progress feedback." },
+      { "name": "duration-fast", "value": "160ms", "purpose": "Hover and focus feedback." },
+      { "name": "duration-standard", "value": "220ms", "purpose": "State changes after check-in or encouragement." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "430px" },
+      { "name": "tablet", "value": "768px" },
+      { "name": "desktop", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Check-In Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Use for the single highest-intent action on the screen.",
+      "html": "<button class=\"ds-btn-primary\">Check in วันนี้</button>",
+      "css": ".ds-btn-primary { background: #F26D5B; color: #FFFFFF; border: 0; border-radius: 18px; padding: 20px 24px; min-height: 68px; width: 100%; font-family: \"LINE Seed Sans TH\", \"Noto Sans Thai\", \"IBM Plex Sans Thai\", \"Prompt\", system-ui, sans-serif; font-size: 20px; font-weight: 780; letter-spacing: 0; transition: transform 160ms cubic-bezier(0.25, 1, 0.5, 1), background 160ms cubic-bezier(0.25, 1, 0.5, 1); } .ds-btn-primary:hover { background: #E95F4D; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 3px solid #0F5F62; outline-offset: 3px; } .ds-btn-primary:active { transform: translateY(0); }"
+    },
+    {
+      "name": "Secondary Encouragement Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Use for supportive secondary actions such as encouragement or viewing group progress.",
+      "html": "<button class=\"ds-btn-secondary\">ส่งกำลังใจ</button>",
+      "css": ".ds-btn-secondary { background: #FFFFFF; color: #159A9C; border: 2px solid #159A9C; border-radius: 16px; padding: 14px 20px; min-height: 52px; font-family: \"LINE Seed Sans TH\", \"Noto Sans Thai\", \"IBM Plex Sans Thai\", \"Prompt\", system-ui, sans-serif; font-size: 16px; font-weight: 760; letter-spacing: 0; transition: background 160ms cubic-bezier(0.25, 1, 0.5, 1), transform 160ms cubic-bezier(0.25, 1, 0.5, 1); } .ds-btn-secondary:hover { background: #E0F4F1; transform: translateY(-1px); } .ds-btn-secondary:focus-visible { outline: 3px solid #F26D5B; outline-offset: 3px; }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "chip-status",
+      "description": "Use for checked-in, not-yet, day count, and group momentum status.",
+      "html": "<span class=\"ds-chip-status\"><svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><path d=\"M3 8.5 6.5 12 13 4.5\" /></svg>ไปต่อแล้ว</span>",
+      "css": ".ds-chip-status { display: inline-flex; align-items: center; gap: 6px; background: #BFEDEA; color: #0F5F62; border-radius: 999px; padding: 6px 10px; font-family: \"LINE Seed Sans TH\", \"Noto Sans Thai\", \"IBM Plex Sans Thai\", \"Prompt\", system-ui, sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 0; } .ds-chip-status svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Progress Module",
+      "kind": "card",
+      "refersTo": "card-progress",
+      "description": "Use to show group movement before individual judgment.",
+      "html": "<section class=\"ds-progress-card\"><p class=\"ds-progress-kicker\">Day 6 of 21</p><h3>กลุ่มกำลังขยับไปต่อ</h3><p>กลุ่มของเรามี 4/7 คน check in แล้ว</p><div class=\"ds-progress-track\"><span></span></div></section>",
+      "css": ".ds-progress-card { background: #FFFFFF; color: #2F2A25; border: 1px solid #E8DED2; border-radius: 18px; padding: 24px; font-family: \"LINE Seed Sans TH\", \"Noto Sans Thai\", \"IBM Plex Sans Thai\", \"Prompt\", system-ui, sans-serif; } .ds-progress-card h3 { margin: 6px 0 6px; font-size: 20px; line-height: 1.3; font-weight: 720; letter-spacing: 0; } .ds-progress-card p { margin: 0; color: #756F68; font-size: 16px; line-height: 1.6; } .ds-progress-kicker { color: #F26D5B !important; font-size: 13px !important; font-weight: 760 !important; } .ds-progress-track { margin-top: 18px; height: 14px; border-radius: 999px; background: #EEE9E3; overflow: hidden; } .ds-progress-track span { display: block; width: 63%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #0F5F62, #159A9C); }"
+    },
+    {
+      "name": "Member Status Row",
+      "kind": "custom",
+      "refersTo": "card-progress",
+      "description": "Use to show member state without ranking or failure framing.",
+      "html": "<div class=\"ds-member-row\"><span class=\"ds-member-avatar\">ม</span><span class=\"ds-member-name\">มายด์</span><span class=\"ds-member-state\">ไปต่อแล้ว</span></div>",
+      "css": ".ds-member-row { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 10px 12px; background: #FFFFFF; border: 1px solid #E8DED2; border-radius: 14px; color: #2F2A25; font-family: \"LINE Seed Sans TH\", \"Noto Sans Thai\", \"IBM Plex Sans Thai\", \"Prompt\", system-ui, sans-serif; } .ds-member-avatar { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 999px; border: 2px solid #159A9C; color: #159A9C; font-weight: 760; } .ds-member-name { font-size: 15px; font-weight: 650; } .ds-member-state { margin-left: auto; color: #0F5F62; font-size: 13px; font-weight: 700; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "card-progress",
+      "description": "Use for optional proof or setup fields, never as required daily friction unless validated.",
+      "html": "<label class=\"ds-field\"><span>โน้ตสั้น ๆ</span><input placeholder=\"วันนี้อ่านอะไรไปบ้าง\" /></label>",
+      "css": ".ds-field { display: grid; gap: 8px; color: #2F2A25; font-family: \"LINE Seed Sans TH\", \"Noto Sans Thai\", \"IBM Plex Sans Thai\", \"Prompt\", system-ui, sans-serif; font-size: 14px; font-weight: 650; } .ds-field input { min-height: 48px; border: 1px solid #E8DED2; border-radius: 12px; background: #FFFFFF; color: #2F2A25; padding: 0 16px; font: inherit; font-weight: 400; } .ds-field input::placeholder { color: #756F68; opacity: 1; } .ds-field input:focus { border-color: #159A9C; outline: 3px solid rgba(21, 154, 156, 0.22); outline-offset: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Shared Momentum Path",
+    "overview": "Tabbit's interface should feel like a small group visibly moving through a challenge together. The product is warm and friendly, but its visual energy comes from progress, day count, and shared movement rather than passive coziness or decorative cuteness.\n\nThis is a restrained product UI with one clear action layer. Surfaces stay calm and readable for Thai LINE-first mobile use; Momentum Teal carries progress and trust, while Action Coral appears only where the user should act or where a milestone needs energy.\n\nThe system explicitly rejects generic productivity dashboards, solo habit tracker patterns, leaderboard-first comparison, shame-based discipline, passive cozy tracking, and rabbit visuals where decoration is clearer than progress.",
+    "keyCharacteristics": [
+      "Mobile-first, thumb-friendly, and readable in a low-attention LINE context.",
+      "Progress-oriented: users should understand today's group movement within two seconds.",
+      "Supportive: missed-day states are neutral return paths, not failure moments.",
+      "Restrained: teal is the memory color, coral is the action signal, and every color must earn its place.",
+      "Familiar product UI: standard buttons, cards, chips, and progress states before novelty."
+    ],
+    "rules": [
+      { "name": "The Coral Is Action Rule", "body": "Action Coral is reserved for CTAs, day counts, milestones, and completion. Do not use coral as confetti, random decoration, or failure.", "section": "colors" },
+      { "name": "The Teal Carries Momentum Rule", "body": "Momentum Teal should identify progress, checked-in states, and group movement across every screen.", "section": "colors" },
+      { "name": "The No Red Failure Rule", "body": "Missed days use neutral gray, copy, and layout to invite return. Never use harsh red, broken streak visuals, or public failure marks.", "section": "colors" },
+      { "name": "The Thai-First Clarity Rule", "body": "User-facing copy must be short, natural Thai with English product terms only when they are clearer, such as check in, progress, MVP, or challenge.", "section": "typography" },
+      { "name": "The No Display Labels Rule", "body": "Do not use display-scale type for buttons, chips, labels, member rows, or compact product panels.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Product surfaces are bordered or tonal at rest. Do not pair a 1px border with a broad decorative drop shadow on ordinary cards.", "section": "elevation" },
+      { "name": "The Shadow Must Explain State Rule", "body": "If a shadow does not clarify focus, action, or preview depth, remove it.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do make group progress visible within two seconds on the main screen.",
+      "Do use Momentum Teal for progress, checked-in states, and active group movement.",
+      "Do reserve Action Coral for the main CTA, day count, milestones, and completion moments.",
+      "Do keep check-in as one obvious primary action with a large mobile touch target.",
+      "Do pair color states with labels, icons, or shape so progress does not rely on color alone.",
+      "Do use Thai-first, short, forwardable copy for member-facing moments.",
+      "Do keep missed-day states quiet, neutral, and return-oriented."
+    ],
+    "donts": [
+      "Don't make Tabbit look like a generic productivity app or to-do list.",
+      "Don't make it feel like a solo habit tracker with social features added later.",
+      "Don't use leaderboard-first layouts, rankings, trophies, or comparison as the default progress model.",
+      "Don't use shame-based discipline, harsh red failure states, broken streak visuals, or public failure marks.",
+      "Don't make the product a passive cozy tracker that is admired but does not create action.",
+      "Don't make rabbit visuals decorative when they do not communicate progress, commitment, or group movement.",
+      "Don't build a broad community platform, full productivity suite, or corporate dashboard in the MVP visual language.",
+      "Don't use nested cards, oversized decorative shadows, gradient text, side-stripe accents, or rounded cards above 18px."
+    ]
+  }
+}

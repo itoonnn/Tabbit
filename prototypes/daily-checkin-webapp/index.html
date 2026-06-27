@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tabbit Daily Check-In Prototype</title>
+    <style>
+      :root {
+        --color-primary: #159a9c;
+        --color-primary-dark: #0f5f62;
+        --color-background: #fff8f2;
+        --color-background-soft: #fffdf9;
+        --color-surface: #ffffff;
+        --color-accent: #e85f4f;
+        --color-accent-dark: #d95243;
+        --color-accent-soft: #ffe3dd;
+        --color-progress: #bfedea;
+        --color-progress-soft: #e0f4f1;
+        --color-missed: #a89f94;
+        --color-track: #eee9e3;
+        --color-text: #2f2a25;
+        --color-muted: #756f68;
+        --color-border: #e8ded2;
+        --color-focus: rgba(21, 154, 156, 0.26);
+        --shadow-soft: 0 12px 36px rgba(15, 95, 98, 0.12);
+        --shadow-preview: 0 18px 48px rgba(47, 42, 37, 0.12);
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --radius-sm: 0.5rem;
+        --radius-md: 0.75rem;
+        --radius-lg: 1.125rem;
+        --radius-xl: 1.75rem;
+        --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        min-height: 100%;
+        background: var(--color-background);
+        font-size: 16px;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        color: var(--color-text);
+        background:
+          radial-gradient(circle at 8% 6%, rgba(191, 237, 234, 0.62), transparent 28rem),
+          linear-gradient(145deg, var(--color-background-soft), var(--color-background));
+        font-family: "LINE Seed Sans TH", "Noto Sans Thai", "IBM Plex Sans Thai", "Prompt", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        font-kerning: normal;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: max(var(--space-4), env(safe-area-inset-top)) var(--space-4) max(var(--space-4), env(safe-area-inset-bottom));
+      }
+
+      .prototype {
+        width: min(100%, 72rem);
+        display: grid;
+        gap: var(--space-8);
+        align-items: center;
+      }
+
+      .app {
+        width: min(100%, 27rem);
+        min-height: min(58.25rem, calc(100vh - 2rem));
+        margin-inline: auto;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        gap: var(--space-6);
+        padding: var(--space-6);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-xl);
+        background: linear-gradient(180deg, rgba(255, 253, 249, 0.96), rgba(255, 248, 242, 0.98));
+        box-shadow: var(--shadow-preview);
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        min-width: 0;
+      }
+
+      .brand-mark {
+        width: 2.625rem;
+        height: 2.625rem;
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        border-radius: 0.875rem;
+        background: var(--color-primary);
+        color: var(--color-surface);
+      }
+
+      .brand-mark svg {
+        width: 1.7rem;
+        height: 1.7rem;
+      }
+
+      .brand-text {
+        display: grid;
+        gap: 0.125rem;
+        min-width: 0;
+      }
+
+      .wordmark {
+        margin: 0;
+        color: var(--color-primary);
+        font-size: 1.35rem;
+        font-weight: 820;
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      .challenge-name {
+        margin: 0;
+        max-width: 17ch;
+        overflow: hidden;
+        color: var(--color-muted);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        line-height: 1.25;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .day-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        min-height: 2.25rem;
+        padding: 0 var(--space-3);
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+        background: var(--color-surface);
+        color: var(--color-accent);
+        font-size: 0.875rem;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+
+      .hero {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .hero-copy {
+        display: grid;
+        gap: var(--space-2);
+      }
+
+      .screen-title {
+        margin: 0;
+        color: var(--color-text);
+        font-size: 1.95rem;
+        font-weight: 780;
+        line-height: 1.16;
+        letter-spacing: 0;
+        text-wrap: balance;
+      }
+
+      .screen-subtitle {
+        margin: 0;
+        color: var(--color-muted);
+        font-size: 1rem;
+        line-height: 1.55;
+      }
+
+      .momentum-panel {
+        display: grid;
+        gap: var(--space-4);
+        padding: var(--space-4);
+        border: 1px solid rgba(21, 154, 156, 0.18);
+        border-radius: var(--radius-lg);
+        background: var(--color-progress-soft);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .momentum-summary {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
+
+      .day-count {
+        display: grid;
+        gap: 0.125rem;
+      }
+
+      .day-count strong {
+        color: var(--color-accent);
+        font-size: 2.25rem;
+        font-weight: 840;
+        line-height: 1;
+      }
+
+      .day-count span,
+      .group-count span {
+        color: var(--color-muted);
+        font-size: 0.875rem;
+        font-weight: 650;
+      }
+
+      .group-count {
+        display: grid;
+        gap: 0.125rem;
+        text-align: right;
+      }
+
+      .group-count strong {
+        color: var(--color-primary-dark);
+        font-size: 1.5rem;
+        font-weight: 820;
+        line-height: 1.05;
+      }
+
+      .progress-art {
+        position: relative;
+        min-height: 9.5rem;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.3)),
+          radial-gradient(circle at 82% 12%, rgba(232, 95, 79, 0.16), transparent 8rem);
+      }
+
+      .progress-art svg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .progress-label {
+        position: absolute;
+        left: var(--space-4);
+        bottom: var(--space-4);
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        min-height: 2.25rem;
+        padding: 0 var(--space-3);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.86);
+        color: var(--color-primary-dark);
+        font-size: 0.875rem;
+        font-weight: 760;
+      }
+
+      .progress-label svg {
+        position: static;
+        width: 1rem;
+        height: 1rem;
+        flex: 0 0 auto;
+      }
+
+      .member-strip {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: var(--space-2);
+      }
+
+      .member-dot {
+        display: grid;
+        justify-items: center;
+        gap: 0.375rem;
+        color: var(--color-muted);
+        font-size: 0.6875rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .avatar {
+        position: relative;
+        width: 2.35rem;
+        height: 2.35rem;
+        display: grid;
+        place-items: center;
+        border: 2px solid var(--color-border);
+        border-radius: 999px;
+        background: var(--color-surface);
+        color: var(--color-missed);
+        font-size: 0.875rem;
+        font-weight: 800;
+      }
+
+      .avatar.checked {
+        border-color: var(--color-primary);
+        color: var(--color-primary);
+      }
+
+      .avatar.checked::after {
+        content: "";
+        position: absolute;
+        right: -0.1rem;
+        bottom: -0.1rem;
+        width: 0.9rem;
+        height: 0.9rem;
+        border: 2px solid var(--color-progress-soft);
+        border-radius: 999px;
+        background: var(--color-primary);
+        box-shadow: inset 0 0 0 0.22rem var(--color-primary);
+      }
+
+      .avatar.current {
+        border-color: var(--color-accent);
+        color: var(--color-accent);
+        background: #fff4ef;
+      }
+
+      .primary-actions {
+        display: grid;
+        gap: var(--space-3);
+      }
+
+      .check-button {
+        position: relative;
+        min-height: 4.25rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-2);
+        border: 0;
+        border-radius: var(--radius-lg);
+        background: var(--color-accent);
+        color: var(--color-surface);
+        font-size: 1.25rem;
+        font-weight: 800;
+        letter-spacing: 0;
+        transition:
+          background 160ms var(--ease-out),
+          transform 160ms var(--ease-out),
+          box-shadow 160ms var(--ease-out);
+      }
+
+      .check-button:hover {
+        background: var(--color-accent-dark);
+        transform: translateY(-1px);
+        box-shadow: 0 12px 26px rgba(232, 95, 79, 0.24);
+      }
+
+      .check-button:active {
+        transform: translateY(0);
+      }
+
+      .check-button[aria-busy="true"] {
+        pointer-events: none;
+      }
+
+      .check-button.is-done {
+        background: var(--color-primary);
+      }
+
+      .spinner {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 2px solid rgba(255, 255, 255, 0.46);
+        border-top-color: var(--color-surface);
+        border-radius: 999px;
+        animation: spin 700ms linear infinite;
+      }
+
+      .secondary-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3);
+      }
+
+      .secondary-button {
+        min-height: 3.25rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-surface);
+        color: var(--color-primary-dark);
+        font-size: 0.9375rem;
+        font-weight: 760;
+        transition:
+          border-color 160ms var(--ease-out),
+          background 160ms var(--ease-out),
+          transform 160ms var(--ease-out);
+      }
+
+      .secondary-button:hover {
+        border-color: var(--color-primary);
+        background: var(--color-progress-soft);
+        transform: translateY(-1px);
+      }
+
+      .status-stack {
+        display: grid;
+        gap: var(--space-3);
+      }
+
+      .return-note,
+      .proof-panel,
+      .encourage-panel,
+      .toast {
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        background: var(--color-surface);
+      }
+
+      .return-note {
+        display: flex;
+        align-items: start;
+        gap: var(--space-3);
+        padding: var(--space-4);
+      }
+
+      .return-note-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        flex: 0 0 auto;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        background: var(--color-accent-soft);
+        color: var(--color-accent);
+      }
+
+      .return-note p,
+      .proof-panel p,
+      .encourage-panel p {
+        margin: 0;
+      }
+
+      .return-note strong,
+      .proof-panel strong,
+      .encourage-panel strong {
+        display: block;
+        margin-bottom: 0.15rem;
+        color: var(--color-text);
+        font-size: 0.9375rem;
+        font-weight: 760;
+      }
+
+      .return-note span,
+      .proof-panel span,
+      .encourage-panel span {
+        color: var(--color-muted);
+        font-size: 0.875rem;
+        line-height: 1.45;
+      }
+
+      .proof-panel,
+      .encourage-panel {
+        display: none;
+        gap: var(--space-4);
+        padding: var(--space-4);
+      }
+
+      .proof-panel.is-visible,
+      .encourage-panel.is-visible {
+        display: grid;
+        animation: reveal 220ms var(--ease-out);
+      }
+
+      .proof-form {
+        display: grid;
+        gap: var(--space-3);
+      }
+
+      .proof-label {
+        display: grid;
+        gap: var(--space-2);
+        color: var(--color-text);
+        font-size: 0.875rem;
+        font-weight: 700;
+      }
+
+      .proof-label textarea {
+        width: 100%;
+        min-height: 5.75rem;
+        resize: vertical;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: var(--space-3);
+        background: #fffdfb;
+        color: var(--color-text);
+        line-height: 1.55;
+      }
+
+      .proof-label textarea::placeholder {
+        color: var(--color-muted);
+        opacity: 1;
+      }
+
+      .proof-actions {
+        display: flex;
+        gap: var(--space-2);
+        flex-wrap: wrap;
+      }
+
+      .mini-button {
+        min-height: 2.5rem;
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+        background: var(--color-surface);
+        color: var(--color-primary-dark);
+        padding: 0 var(--space-3);
+        font-size: 0.875rem;
+        font-weight: 760;
+      }
+
+      .mini-button.primary {
+        border-color: var(--color-primary);
+        background: var(--color-primary);
+        color: var(--color-surface);
+      }
+
+      .reaction-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-2);
+      }
+
+      .reaction {
+        min-height: 2.75rem;
+        border: 1px solid var(--color-border);
+        border-radius: 999px;
+        background: #fffdfb;
+        color: var(--color-text);
+        font-size: 0.9rem;
+        font-weight: 730;
+        transition:
+          border-color 160ms var(--ease-out),
+          background 160ms var(--ease-out),
+          color 160ms var(--ease-out);
+      }
+
+      .reaction:hover,
+      .reaction.is-selected {
+        border-color: var(--color-primary);
+        background: var(--color-progress-soft);
+        color: var(--color-primary-dark);
+      }
+
+      .member-list {
+        display: grid;
+        gap: var(--space-2);
+      }
+
+      .member-row {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        min-height: 3.3rem;
+        padding: 0.55rem var(--space-3);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .member-row .avatar {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.8125rem;
+      }
+
+      .member-name {
+        display: grid;
+        gap: 0.1rem;
+        min-width: 0;
+      }
+
+      .member-name strong {
+        color: var(--color-text);
+        font-size: 0.9375rem;
+        font-weight: 720;
+        line-height: 1.15;
+      }
+
+      .member-name span {
+        color: var(--color-muted);
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .member-state {
+        margin-left: auto;
+        color: var(--color-primary-dark);
+        font-size: 0.8125rem;
+        font-weight: 760;
+        white-space: nowrap;
+      }
+
+      .member-state.neutral {
+        color: var(--color-muted);
+      }
+
+      .toast {
+        position: fixed;
+        left: 50%;
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        z-index: 20;
+        width: min(calc(100% - 2rem), 24rem);
+        padding: var(--space-3) var(--space-4);
+        color: var(--color-primary-dark);
+        box-shadow: var(--shadow-soft);
+        transform: translate(-50%, 140%);
+        transition: transform 220ms var(--ease-out);
+      }
+
+      .toast.is-visible {
+        transform: translate(-50%, 0);
+      }
+
+      .toast strong {
+        display: block;
+        margin-bottom: 0.15rem;
+        font-size: 0.9375rem;
+      }
+
+      .toast span {
+        color: var(--color-muted);
+        font-size: 0.8125rem;
+      }
+
+      .notes {
+        display: none;
+        max-width: 31rem;
+      }
+
+      .notes h2 {
+        margin: 0 0 var(--space-3);
+        color: var(--color-primary-dark);
+        font-size: 1.5rem;
+        line-height: 1.2;
+      }
+
+      .notes p {
+        margin: 0 0 var(--space-4);
+        color: var(--color-muted);
+        line-height: 1.65;
+      }
+
+      .notes ul {
+        display: grid;
+        gap: var(--space-3);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .notes li {
+        display: flex;
+        gap: var(--space-3);
+        align-items: start;
+        color: var(--color-text);
+        line-height: 1.45;
+      }
+
+      .notes li::before {
+        content: "";
+        width: 0.55rem;
+        height: 0.55rem;
+        flex: 0 0 auto;
+        margin-top: 0.5rem;
+        border-radius: 999px;
+        background: var(--color-primary);
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--color-focus);
+        outline-offset: 3px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+          transform: translateY(0.5rem);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (min-width: 58rem) {
+        .prototype {
+          grid-template-columns: minmax(26rem, 27rem) 1fr;
+        }
+
+        .app {
+          margin-inline: 0;
+        }
+
+        .notes {
+          display: block;
+        }
+      }
+
+      @media (max-width: 26rem) {
+        .page {
+          padding: 0;
+        }
+
+        .app {
+          min-height: 100vh;
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+        }
+
+        .screen-title {
+          font-size: 1.75rem;
+        }
+
+        .member-strip {
+          gap: 0.375rem;
+        }
+
+        .avatar {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="prototype">
+        <section class="app" aria-labelledby="screen-title">
+          <header class="topbar">
+            <div class="brand" aria-label="Tabbit">
+              <div class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none">
+                  <path d="M8 34h10c3 0 4-1 4-4v-5c0-3 1-4 4-4h8c3 0 4-1 4-4V9" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M31 9h8" stroke="#FFE3DD" stroke-width="4" stroke-linecap="round" />
+                  <path d="M12 29c2-8 9-10 14-6 5 5 3 13-3 16-6 4-14-1-11-10Z" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="brand-text">
+                <p class="wordmark">Tabbit</p>
+                <p class="challenge-name">อ่านหนังสือ 21 วัน</p>
+              </div>
+            </div>
+            <div class="day-chip" aria-label="วันที่ 6 จาก 21">Day 6</div>
+          </header>
+
+          <div class="hero">
+            <div class="hero-copy">
+              <h1 id="screen-title" class="screen-title">วันนี้ไปต่ออีกนิดไหม?</h1>
+              <p class="screen-subtitle">check in สั้น ๆ แล้วช่วยให้ progress กลุ่มขยับไปด้วยกัน</p>
+            </div>
+
+            <section class="momentum-panel" aria-labelledby="momentum-title">
+              <div class="momentum-summary">
+                <div class="day-count">
+                  <strong>Day 6</strong>
+                  <span>of 21</span>
+                </div>
+                <div class="group-count">
+                  <strong><span id="checked-count">4</span>/7</strong>
+                  <span>check in วันนี้</span>
+                </div>
+              </div>
+
+              <div class="progress-art" role="img" aria-label="เส้นทาง progress ของกลุ่มอยู่วันที่ 6 จาก 21">
+                <svg viewBox="0 0 360 152" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M28 118 H104 C124 118 124 100 124 91 V76 C124 58 138 58 152 58 H222 C240 58 240 42 240 32 V18" fill="none" stroke="#E8DED2" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M28 118 H104 C124 118 124 100 124 91 V76 C124 58 138 58 152 58 H208" fill="none" stroke="url(#progress-line)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="212" cy="58" r="22" fill="#E85F4F" />
+                  <text x="212" y="66" text-anchor="middle" fill="#FFFFFF" font-size="20" font-weight="800">6</text>
+                  <circle cx="48" cy="118" r="8" fill="#FFFFFF" />
+                  <circle cx="124" cy="82" r="8" fill="#FFFFFF" />
+                  <defs>
+                    <linearGradient id="progress-line" x1="28" y1="118" x2="208" y2="58" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#0F5F62" />
+                      <stop offset="1" stop-color="#159A9C" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="progress-label" id="momentum-title">
+                  <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                    <path d="M3 9.5 7 13l8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  กลุ่มกำลังไปต่อ
+                </div>
+              </div>
+
+              <div class="member-strip" aria-label="สถานะสมาชิกวันนี้">
+                <span class="member-dot"><span class="avatar checked">ม</span>Mek</span>
+                <span class="member-dot"><span class="avatar checked">อ</span>Aom</span>
+                <span class="member-dot"><span class="avatar checked">ต</span>Tee</span>
+                <span class="member-dot"><span class="avatar checked">พ</span>Prae</span>
+                <span class="member-dot"><span class="avatar current" id="you-avatar">คุณ</span>You</span>
+                <span class="member-dot"><span class="avatar">ค</span>Kim</span>
+                <span class="member-dot"><span class="avatar">น</span>Nana</span>
+              </div>
+            </section>
+          </div>
+
+          <div class="primary-actions" aria-live="polite">
+            <button class="check-button" id="check-button" type="button">
+              <span id="check-label">Check in วันนี้</span>
+            </button>
+            <div class="secondary-row">
+              <button class="secondary-button" type="button" id="progress-button">ดู progress</button>
+              <button class="secondary-button" type="button" id="encourage-button">ส่งกำลังใจ</button>
+            </div>
+          </div>
+
+          <div class="status-stack">
+            <section class="return-note" aria-label="ทางกลับมาต่อเมื่อพลาด">
+              <div class="return-note-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M6 13c1.8 2.8 6 4.2 9.5 1.7 3.4-2.4 3.2-7.6-.2-9.8C11.5 2.5 6.8 4 5.4 7.4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                  <path d="M4.5 4.5v4h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <p>
+                <strong>ถ้าเมื่อวานพลาด วันนี้ยังไปต่อได้</strong>
+                <span>เป้าหมายคือช่วยกันไปให้จบ ไม่ใช่ทำให้ใครรู้สึกผิด</span>
+              </p>
+            </section>
+
+            <section class="proof-panel" id="proof-panel" aria-labelledby="proof-title">
+              <p>
+                <strong id="proof-title">เพิ่ม proof สั้น ๆ ไหม?</strong>
+                <span>ไม่บังคับ ถ้ามีโน้ตหรือรูปค่อยเพิ่มทีหลังได้</span>
+              </p>
+              <form class="proof-form">
+                <label class="proof-label">
+                  โน้ตวันนี้
+                  <textarea id="proof-note" placeholder="เช่น อ่านบทที่ 3 ไป 18 หน้า"></textarea>
+                </label>
+                <div class="proof-actions">
+                  <button class="mini-button primary" type="button" id="save-proof">บันทึกโน้ต</button>
+                  <button class="mini-button" type="button" id="skip-proof">ข้ามก่อน</button>
+                </div>
+              </form>
+            </section>
+
+            <section class="encourage-panel" id="encourage-panel" aria-labelledby="encourage-title">
+              <p>
+                <strong id="encourage-title">ส่งกำลังใจให้เพื่อนสักคนไหม?</strong>
+                <span>เลือกข้อความเร็ว ๆ เพื่อให้กลุ่มยังรู้สึกไปต่อด้วยกัน</span>
+              </p>
+              <div class="reaction-grid" role="group" aria-label="ข้อความให้กำลังใจ">
+                <button class="reaction" type="button">ไปต่อกัน</button>
+                <button class="reaction" type="button">เก่งมาก</button>
+                <button class="reaction" type="button">พรุ่งนี้เอาใหม่</button>
+                <button class="reaction" type="button">ยังอยู่ด้วยกัน</button>
+              </div>
+            </section>
+
+            <section class="member-list" aria-label="รายชื่อสมาชิก">
+              <div class="member-row">
+                <span class="avatar checked">ม</span>
+                <span class="member-name"><strong>มายด์</strong><span>check in เมื่อ 8 นาทีที่แล้ว</span></span>
+                <span class="member-state">ไปต่อแล้ว</span>
+              </div>
+              <div class="member-row">
+                <span class="avatar checked">อ</span>
+                <span class="member-name"><strong>อ้อม</strong><span>เพิ่มโน้ตสั้น ๆ แล้ว</span></span>
+                <span class="member-state">ไปต่อแล้ว</span>
+              </div>
+              <div class="member-row">
+                <span class="avatar">ค</span>
+                <span class="member-name"><strong>คิม</strong><span>ยังไม่ check in วันนี้</span></span>
+                <span class="member-state neutral">ส่งกำลังใจได้</span>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <aside class="notes" aria-label="Prototype notes">
+          <h2>Daily check-in webapp prototype</h2>
+          <p>หน้าเดียวสำหรับทดสอบ core loop: เห็น progress, check in ได้เร็ว, แล้วชวนให้ส่งกำลังใจโดยไม่ทำให้คนที่ยังไม่มาโดนจัดอันดับหรือรู้สึกผิด</p>
+          <ul>
+            <li><strong>CEO:</strong> scope เป็น prototype หน้าเดียว ไม่เพิ่ม onboarding หรือ dashboard เต็ม</li>
+            <li><strong>Product Designer:</strong> CTA อยู่เหนือ fold และ state สำคัญกดได้จริง</li>
+            <li><strong>Branding Expert:</strong> copy เน้น Shared Commitment ไม่ใช่ cute/passive หรือ shame</li>
+            <li><strong>CTO:</strong> single HTML เพื่อเปิดดู/แก้/ย้ายเข้า framework ได้ง่ายภายหลัง</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      <strong id="toast-title">บันทึกแล้ว</strong>
+      <span id="toast-message">progress กลุ่มขยับไปอีกนิด</span>
+    </div>
+
+    <script>
+      const checkButton = document.querySelector("#check-button");
+      const checkLabel = document.querySelector("#check-label");
+      const checkedCount = document.querySelector("#checked-count");
+      const youAvatar = document.querySelector("#you-avatar");
+      const proofPanel = document.querySelector("#proof-panel");
+      const encouragePanel = document.querySelector("#encourage-panel");
+      const encourageButton = document.querySelector("#encourage-button");
+      const progressButton = document.querySelector("#progress-button");
+      const toast = document.querySelector("#toast");
+      const toastTitle = document.querySelector("#toast-title");
+      const toastMessage = document.querySelector("#toast-message");
+      const saveProof = document.querySelector("#save-proof");
+      const skipProof = document.querySelector("#skip-proof");
+      const proofNote = document.querySelector("#proof-note");
+      const reactions = document.querySelectorAll(".reaction");
+
+      let toastTimer;
+      let checkedIn = false;
+
+      function showToast(title, message) {
+        window.clearTimeout(toastTimer);
+        toastTitle.textContent = title;
+        toastMessage.textContent = message;
+        toast.classList.add("is-visible");
+        toastTimer = window.setTimeout(() => {
+          toast.classList.remove("is-visible");
+        }, 2600);
+      }
+
+      function setLoading(isLoading) {
+        checkButton.setAttribute("aria-busy", String(isLoading));
+        if (isLoading) {
+          checkLabel.innerHTML = '<span class="spinner" aria-hidden="true"></span><span>กำลัง check in...</span>';
+        }
+      }
+
+      checkButton.addEventListener("click", () => {
+        if (checkedIn) {
+          proofPanel.classList.toggle("is-visible");
+          return;
+        }
+
+        setLoading(true);
+        window.setTimeout(() => {
+          checkedIn = true;
+          checkedCount.textContent = "5";
+          youAvatar.classList.remove("current");
+          youAvatar.classList.add("checked");
+          checkButton.classList.add("is-done");
+          checkButton.setAttribute("aria-busy", "false");
+          checkLabel.textContent = "วันนี้ไปต่อแล้ว";
+          proofPanel.classList.add("is-visible");
+          showToast("check in แล้ว", "action เล็ก ๆ ของคุณช่วยให้ progress กลุ่มขยับ");
+        }, 520);
+      });
+
+      encourageButton.addEventListener("click", () => {
+        encouragePanel.classList.toggle("is-visible");
+        if (encouragePanel.classList.contains("is-visible")) {
+          encouragePanel.querySelector(".reaction")?.focus({ preventScroll: true });
+        }
+      });
+
+      progressButton.addEventListener("click", () => {
+        document.querySelector(".member-list")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        showToast("progress วันนี้", `${checkedCount.textContent}/7 คน check in แล้ว`);
+      });
+
+      saveProof.addEventListener("click", () => {
+        const note = proofNote.value.trim();
+        proofPanel.classList.remove("is-visible");
+        showToast("บันทึกโน้ตแล้ว", note ? "เพื่อนในกลุ่มเห็น context เพิ่มขึ้น" : "ข้าม proof ได้ ไม่บังคับ");
+      });
+
+      skipProof.addEventListener("click", () => {
+        proofPanel.classList.remove("is-visible");
+        showToast("ข้าม proof แล้ว", "check in ยังนับเรียบร้อย");
+      });
+
+      reactions.forEach((button) => {
+        button.addEventListener("click", () => {
+          reactions.forEach((item) => item.classList.remove("is-selected"));
+          button.classList.add("is-selected");
+          showToast("ส่งกำลังใจแล้ว", button.textContent);
+        });
+      });
+    </script>
+  </body>
+</html>
