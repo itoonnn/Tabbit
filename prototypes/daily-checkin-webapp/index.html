@@ -115,16 +115,18 @@
         width: 2.625rem;
         height: 2.625rem;
         flex: 0 0 auto;
-        display: grid;
-        place-items: center;
+        display: block;
         border-radius: 0.875rem;
-        background: var(--color-primary);
-        color: var(--color-surface);
+        background: var(--color-surface);
+        overflow: hidden;
+        box-shadow: 0 0 0 1px rgba(232, 222, 210, 0.8);
       }
 
-      .brand-mark svg {
-        width: 1.8rem;
-        height: 1.8rem;
+      .brand-mark img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
       .brand-text {
@@ -546,9 +548,12 @@
       }
 
       .reaction {
-        min-height: 2.75rem;
+        min-height: 4.25rem;
+        display: grid;
+        place-items: center;
+        gap: 0.2rem;
         border: 1px solid var(--color-border);
-        border-radius: 999px;
+        border-radius: var(--radius-lg);
         background: #fffdfb;
         color: var(--color-text);
         font-size: 0.9rem;
@@ -556,7 +561,8 @@
         transition:
           border-color 160ms var(--ease-out),
           background 160ms var(--ease-out),
-          color 160ms var(--ease-out);
+          color 160ms var(--ease-out),
+          transform 160ms var(--ease-out);
       }
 
       .reaction:hover,
@@ -564,6 +570,17 @@
         border-color: var(--color-primary);
         background: var(--color-progress-soft);
         color: var(--color-primary-dark);
+        transform: translateY(-1px);
+      }
+
+      .reaction-icon {
+        font-size: 1.45rem;
+        line-height: 1;
+      }
+
+      .reaction-label {
+        font-size: 0.78rem;
+        line-height: 1.2;
       }
 
       .member-list {
@@ -783,15 +800,7 @@
         <section class="app" aria-labelledby="screen-title">
           <header class="topbar">
             <div class="brand" aria-label="Tabbit">
-              <div class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 48 48" fill="none">
-                  <path d="M10 34h9c3 0 5-2 5-5v-6c0-3 2-5 5-5h9" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M32 11h8v8" stroke="#FFE3DD" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-                  <circle cx="13" cy="34" r="3" fill="#FFE3DD" />
-                  <circle cx="24" cy="23" r="3" fill="currentColor" />
-                  <circle cx="38" cy="18" r="3" fill="#FFE3DD" />
-                </svg>
-              </div>
+              <img class="brand-mark" src="../../docs/visual-mockups/shared-commitment/teal-coral-real/app-icon.png" alt="" />
               <div class="brand-text">
                 <p class="wordmark">Tabbit</p>
                 <p class="challenge-name">อ่านหนังสือ 21 วัน</p>
@@ -896,14 +905,26 @@
 
             <section class="encourage-panel" id="encourage-panel" aria-labelledby="encourage-title">
               <p>
-                <strong id="encourage-title">ส่งกำลังใจให้เพื่อนสักคนไหม?</strong>
-                <span>เลือกข้อความเร็ว ๆ เพื่อให้กลุ่มยังรู้สึกไปต่อด้วยกัน</span>
+                <strong id="encourage-title">ส่ง reaction ให้กลุ่ม</strong>
+                <span>แตะครั้งเดียวก็พอ ให้เพื่อนรู้ว่ายังไปต่อด้วยกัน</span>
               </p>
-              <div class="reaction-grid" role="group" aria-label="ข้อความให้กำลังใจ">
-                <button class="reaction" type="button">ไปต่อกัน</button>
-                <button class="reaction" type="button">เก่งมาก</button>
-                <button class="reaction" type="button">พรุ่งนี้เอาใหม่</button>
-                <button class="reaction" type="button">ยังอยู่ด้วยกัน</button>
+              <div class="reaction-grid" role="group" aria-label="reaction ให้กำลังใจ">
+                <button class="reaction" type="button" data-reaction="เป็นกำลังใจ">
+                  <span class="reaction-icon" aria-hidden="true">❤️</span>
+                  <span class="reaction-label">เป็นกำลังใจ</span>
+                </button>
+                <button class="reaction" type="button" data-reaction="ไปต่อกัน">
+                  <span class="reaction-icon" aria-hidden="true">🔥</span>
+                  <span class="reaction-label">ไปต่อกัน</span>
+                </button>
+                <button class="reaction" type="button" data-reaction="สู้ต่อ">
+                  <span class="reaction-icon" aria-hidden="true">💪</span>
+                  <span class="reaction-label">สู้ต่อ</span>
+                </button>
+                <button class="reaction" type="button" data-reaction="เห็นแล้วนะ">
+                  <span class="reaction-icon" aria-hidden="true">👏</span>
+                  <span class="reaction-label">เห็นแล้วนะ</span>
+                </button>
               </div>
             </section>
 
@@ -1029,7 +1050,7 @@
         button.addEventListener("click", () => {
           reactions.forEach((item) => item.classList.remove("is-selected"));
           button.classList.add("is-selected");
-          showToast("ส่งกำลังใจแล้ว", button.textContent);
+          showToast("ส่ง reaction แล้ว", button.dataset.reaction || button.textContent.trim());
         });
       });
     </script>
