@@ -365,9 +365,14 @@
       }
 
       .worker {
+        position: relative;
         display: grid;
         justify-items: center;
         gap: 0.35rem;
+        padding: 0;
+        border: 0;
+        border-radius: var(--radius-md);
+        background: transparent;
         color: var(--color-muted);
         font-size: 0.6875rem;
         font-weight: 700;
@@ -385,6 +390,17 @@
         background: var(--color-surface);
         font-size: 1.1rem;
         filter: grayscale(0.55);
+        transition:
+          transform 180ms var(--ease-out),
+          border-color 180ms var(--ease-out),
+          background-color 180ms var(--ease-out),
+          box-shadow 180ms var(--ease-out),
+          filter 180ms var(--ease-out);
+      }
+
+      .worker:hover .rabbit-token,
+      .worker:focus-visible .rabbit-token {
+        transform: translateY(-0.12rem);
       }
 
       .rabbit-token.active {
@@ -409,6 +425,23 @@
         border-color: var(--color-accent);
         background: #fff4ef;
         filter: none;
+      }
+
+      .rabbit-token.is-picked {
+        animation: rabbit-pick 320ms var(--ease-out);
+        box-shadow: 0 0.55rem 1rem rgba(21, 154, 156, 0.16);
+      }
+
+      .sleep-effect {
+        position: absolute;
+        top: -0.5rem;
+        right: 0.3rem;
+        color: var(--color-primary-dark);
+        font-size: 0.75rem;
+        font-weight: 850;
+        letter-spacing: 0;
+        pointer-events: none;
+        animation: zzz-float 520ms var(--ease-out) forwards;
       }
 
       .avatar {
@@ -857,6 +890,32 @@
         }
       }
 
+      @keyframes rabbit-pick {
+        0% {
+          transform: translateY(0) scale(1);
+        }
+        42% {
+          transform: translateY(-0.72rem) scale(1.12);
+        }
+        100% {
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes zzz-float {
+        0% {
+          opacity: 0;
+          transform: translate3d(0, 0.2rem, 0) scale(0.86);
+        }
+        18% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translate3d(0.2rem, -1.1rem, 0) scale(1.08);
+        }
+      }
+
       @media (min-width: 58rem) {
         .prototype {
           grid-template-columns: minmax(26rem, 27rem) 1fr;
@@ -892,6 +951,11 @@
         }
 
         .avatar {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .rabbit-token {
           width: 2rem;
           height: 2rem;
         }
@@ -965,13 +1029,34 @@
               </div>
 
               <div class="worker-strip" aria-label="สถานะกระต่ายในฟาร์มวันนี้">
-                <span class="worker"><span class="rabbit-token active" aria-hidden="true">🐰</span>Mek</span>
-                <span class="worker"><span class="rabbit-token active" aria-hidden="true">🐰</span>Aom</span>
-                <span class="worker"><span class="rabbit-token active" aria-hidden="true">🐰</span>Tee</span>
-                <span class="worker"><span class="rabbit-token active" aria-hidden="true">🐰</span>Prae</span>
-                <span class="worker"><span class="rabbit-token current" id="you-rabbit" aria-hidden="true">💤</span>You</span>
-                <span class="worker"><span class="rabbit-token" aria-hidden="true">💤</span>Kim</span>
-                <span class="worker"><span class="rabbit-token" aria-hidden="true">💤</span>Nana</span>
+                <button class="worker" type="button" data-rabbit-state="active" aria-label="Mek active แล้ว หยิบกระต่ายขึ้นมาดูได้">
+                  <span class="rabbit-token active" aria-hidden="true">🐰</span>
+                  <span>Mek</span>
+                </button>
+                <button class="worker" type="button" data-rabbit-state="active" aria-label="Aom active แล้ว หยิบกระต่ายขึ้นมาดูได้">
+                  <span class="rabbit-token active" aria-hidden="true">🐰</span>
+                  <span>Aom</span>
+                </button>
+                <button class="worker" type="button" data-rabbit-state="active" aria-label="Tee active แล้ว หยิบกระต่ายขึ้นมาดูได้">
+                  <span class="rabbit-token active" aria-hidden="true">🐰</span>
+                  <span>Tee</span>
+                </button>
+                <button class="worker" type="button" data-rabbit-state="active" aria-label="Prae active แล้ว หยิบกระต่ายขึ้นมาดูได้">
+                  <span class="rabbit-token active" aria-hidden="true">🐰</span>
+                  <span>Prae</span>
+                </button>
+                <button class="worker" id="you-worker" type="button" data-rabbit-state="sleeping" aria-label="You ยังพักอยู่ คลิกเพื่อดู zZ">
+                  <span class="rabbit-token current" id="you-rabbit" aria-hidden="true">💤</span>
+                  <span>You</span>
+                </button>
+                <button class="worker" type="button" data-rabbit-state="sleeping" aria-label="Kim ยังพักอยู่ คลิกเพื่อดู zZ">
+                  <span class="rabbit-token" aria-hidden="true">💤</span>
+                  <span>Kim</span>
+                </button>
+                <button class="worker" type="button" data-rabbit-state="sleeping" aria-label="Nana ยังพักอยู่ คลิกเพื่อดู zZ">
+                  <span class="rabbit-token" aria-hidden="true">💤</span>
+                  <span>Nana</span>
+                </button>
               </div>
             </section>
           </div>
@@ -1092,6 +1177,7 @@
       const farmHelper = document.querySelector("#farm-helper");
       const farmScene = document.querySelector("#farm-scene");
       const youRabbit = document.querySelector("#you-rabbit");
+      const youWorker = document.querySelector("#you-worker");
       const proofPanel = document.querySelector("#proof-panel");
       const encouragePanel = document.querySelector("#encourage-panel");
       const encourageButton = document.querySelector("#encourage-button");
@@ -1103,6 +1189,7 @@
       const skipProof = document.querySelector("#skip-proof");
       const proofNote = document.querySelector("#proof-note");
       const reactions = document.querySelectorAll(".reaction");
+      const rabbitWorkers = document.querySelectorAll(".worker[data-rabbit-state]");
 
       let toastTimer;
       let checkedIn = false;
@@ -1124,6 +1211,39 @@
         }
       }
 
+      function pickRabbit(token) {
+        token.classList.remove("is-picked");
+        void token.offsetWidth;
+        token.classList.add("is-picked");
+        window.setTimeout(() => token.classList.remove("is-picked"), 340);
+      }
+
+      function showSleepEffect(worker) {
+        const existingEffect = worker.querySelector(".sleep-effect");
+        existingEffect?.remove();
+
+        const effect = document.createElement("span");
+        effect.className = "sleep-effect";
+        effect.setAttribute("aria-hidden", "true");
+        effect.textContent = "zZ";
+        worker.append(effect);
+        effect.addEventListener("animationend", () => effect.remove(), { once: true });
+      }
+
+      rabbitWorkers.forEach((worker) => {
+        worker.addEventListener("click", () => {
+          const token = worker.querySelector(".rabbit-token");
+          if (!token) return;
+
+          if (worker.dataset.rabbitState === "active") {
+            pickRabbit(token);
+            return;
+          }
+
+          showSleepEffect(worker);
+        });
+      });
+
       checkButton.addEventListener("click", () => {
         if (checkedIn) {
           proofPanel.classList.toggle("is-visible");
@@ -1141,6 +1261,9 @@
           youRabbit.classList.remove("current");
           youRabbit.classList.add("active");
           youRabbit.textContent = "🐰";
+          youWorker.dataset.rabbitState = "active";
+          youWorker.setAttribute("aria-label", "You active แล้ว หยิบกระต่ายขึ้นมาดูได้");
+          pickRabbit(youRabbit);
           checkButton.classList.add("is-done");
           checkButton.setAttribute("aria-busy", "false");
           checkLabel.textContent = "วันนี้ไปต่อแล้ว";
