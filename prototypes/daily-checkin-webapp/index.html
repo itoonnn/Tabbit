@@ -249,19 +249,97 @@
 
       .progress-art {
         position: relative;
-        min-height: 9.5rem;
+        min-height: 10.25rem;
         border-radius: var(--radius-lg);
         overflow: hidden;
         background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.3)),
-          radial-gradient(circle at 82% 12%, rgba(232, 95, 79, 0.16), transparent 8rem);
+          linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.42)),
+          radial-gradient(circle at 82% 12%, rgba(232, 95, 79, 0.14), transparent 8rem);
       }
 
-      .progress-art svg {
-        position: absolute;
-        inset: 0;
+      .progress-art.is-growing .farm-image {
+        transform: scale(1.025);
+      }
+
+      .farm-copy {
+        display: grid;
+        gap: 0.2rem;
+      }
+
+      .farm-title {
+        margin: 0;
+        color: var(--color-primary-dark);
+        font-size: 1.08rem;
+        font-weight: 780;
+        line-height: 1.25;
+      }
+
+      .farm-helper {
+        margin: 0;
+        color: var(--color-muted);
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      .farm-image {
+        display: block;
         width: 100%;
         height: 100%;
+        min-height: 10.25rem;
+        object-fit: cover;
+        transition: transform 220ms var(--ease-out);
+      }
+
+      .farm-overlay {
+        position: absolute;
+        inset: var(--space-3) var(--space-3) auto;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: var(--space-3);
+        pointer-events: none;
+      }
+
+      .farm-badge,
+      .farm-count {
+        border: 1px solid rgba(232, 222, 210, 0.9);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 6px 12px rgba(47, 42, 37, 0.08);
+      }
+
+      .farm-badge {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2rem;
+        padding: 0 var(--space-3);
+        border-radius: 999px;
+        color: var(--color-accent);
+        font-size: 0.85rem;
+        font-weight: 820;
+      }
+
+      .farm-count {
+        display: grid;
+        gap: 0.05rem;
+        min-width: 4.8rem;
+        padding: 0.42rem var(--space-3);
+        border-radius: var(--radius-md);
+        text-align: right;
+      }
+
+      .farm-count strong {
+        color: var(--color-primary-dark);
+        font-size: 1rem;
+        font-weight: 840;
+        line-height: 1;
+      }
+
+      .farm-count span {
+        color: var(--color-muted);
+        font-size: 0.68rem;
+        font-weight: 700;
+        line-height: 1.15;
       }
 
       .progress-label {
@@ -274,14 +352,13 @@
         min-height: 2.25rem;
         padding: 0 var(--space-3);
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.86);
+        background: rgba(255, 255, 255, 0.9);
         color: var(--color-primary-dark);
         font-size: 0.875rem;
         font-weight: 760;
       }
 
       .progress-label svg {
-        position: static;
         width: 1rem;
         height: 1rem;
         flex: 0 0 auto;
@@ -834,26 +911,25 @@
                 </div>
               </div>
 
-              <div class="progress-art" role="img" aria-label="เส้นทาง progress ของกลุ่มอยู่วันที่ 6 จาก 21">
-                <svg viewBox="0 0 360 152" preserveAspectRatio="none" aria-hidden="true">
-                  <path d="M28 118 H104 C124 118 124 100 124 91 V76 C124 58 138 58 152 58 H222 C240 58 240 42 240 32 V18" fill="none" stroke="#E8DED2" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M28 118 H104 C124 118 124 100 124 91 V76 C124 58 138 58 152 58 H208" fill="none" stroke="url(#progress-line)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" />
-                  <circle cx="212" cy="58" r="22" fill="#E85F4F" />
-                  <text x="212" y="66" text-anchor="middle" fill="#FFFFFF" font-size="20" font-weight="800">6</text>
-                  <circle cx="48" cy="118" r="8" fill="#FFFFFF" />
-                  <circle cx="124" cy="82" r="8" fill="#FFFFFF" />
-                  <defs>
-                    <linearGradient id="progress-line" x1="28" y1="118" x2="208" y2="58" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#0F5F62" />
-                      <stop offset="1" stop-color="#159A9C" />
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div class="progress-label" id="momentum-title">
+              <div class="farm-copy" id="momentum-title">
+                <p class="farm-title">ฟาร์มของกลุ่มกำลังโต</p>
+                <p class="farm-helper" id="farm-helper">วันนี้มี 4/7 คนช่วยกันขยับ progress แล้ว</p>
+              </div>
+
+              <div class="progress-art" id="farm-scene" role="img" aria-label="ฟาร์มกระต่ายของกลุ่ม มี 4 จาก 7 คน check in วันนี้">
+                <img class="farm-image" src="assets/rabbit-farm-progress.png" alt="" loading="eager" decoding="async" />
+                <div class="farm-overlay" aria-hidden="true">
+                  <span class="farm-badge">Day 6</span>
+                  <span class="farm-count">
+                    <strong id="farm-count">4/7</strong>
+                    <span>ช่วยฟาร์ม</span>
+                  </span>
+                </div>
+                <div class="progress-label">
                   <svg viewBox="0 0 18 18" fill="none" aria-hidden="true">
                     <path d="M3 9.5 7 13l8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
-                  กลุ่มกำลังไปต่อ
+                  กลุ่มกำลังไปต่อด้วยกัน
                 </div>
               </div>
 
@@ -981,6 +1057,9 @@
       const checkButton = document.querySelector("#check-button");
       const checkLabel = document.querySelector("#check-label");
       const checkedCount = document.querySelector("#checked-count");
+      const farmCount = document.querySelector("#farm-count");
+      const farmHelper = document.querySelector("#farm-helper");
+      const farmScene = document.querySelector("#farm-scene");
       const youAvatar = document.querySelector("#you-avatar");
       const proofPanel = document.querySelector("#proof-panel");
       const encouragePanel = document.querySelector("#encourage-panel");
@@ -1024,6 +1103,10 @@
         window.setTimeout(() => {
           checkedIn = true;
           checkedCount.textContent = "5";
+          farmCount.textContent = "5/7";
+          farmHelper.textContent = "วันนี้มี 5/7 คนช่วยกันขยับ progress แล้ว";
+          farmScene.classList.add("is-growing");
+          farmScene.setAttribute("aria-label", "ฟาร์มกระต่ายของกลุ่ม มี 5 จาก 7 คน check in วันนี้");
           youAvatar.classList.remove("current");
           youAvatar.classList.add("checked");
           checkButton.classList.add("is-done");
